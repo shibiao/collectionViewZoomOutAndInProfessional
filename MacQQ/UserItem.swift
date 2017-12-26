@@ -7,9 +7,15 @@
 //
 
 import Cocoa
-
+protocol UserItemDelegate: class {
+    func userItem(_ item: UserItem, didClick button: NSButton)
+}
 class UserItem: NSCollectionViewItem {
+    @IBOutlet weak var closeButton: NSButton!
+    
     @IBOutlet weak var imageButton: LoginImageButton!
+    
+    var delegate: UserItemDelegate?
     var model: UserItemModel! {
         didSet {
             self.imageButton.image = NSImage(named: NSImage.Name(rawValue: model.name))
@@ -19,11 +25,23 @@ class UserItem: NSCollectionViewItem {
     var block: userBlcok?
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        let trackingArea = NSTrackingArea(rect: self.view.bounds, options: [.mouseEnteredAndExited,.activeInActiveApp], owner: self, userInfo: nil)
+        self.view.addTrackingArea(trackingArea)
     }
     @IBAction func handleImageButtonEvent(_ sender: Any) {
         if let block = block {
             block(sender)
+        }
+    }
+    override func mouseEntered(with event: NSEvent) {
+        closeButton.isHidden = false
+    }
+    override func mouseExited(with event: NSEvent) {
+        closeButton.isHidden = true
+    }
+    @IBAction func handleClose(_ sender: Any) {
+        if let delegate = delegate {
+            delegate.userItem(self, didClick: sender as! NSButton)
         }
     }
     

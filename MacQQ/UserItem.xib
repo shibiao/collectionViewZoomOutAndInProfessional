@@ -5,8 +5,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="UserItem" customModule="MacQQ" customModuleProvider="target">
+        <customObject id="-2" userLabel="File's Owner" customClass="UserItem" customModule="collectionViewZoomOutAndInProfessional" customModuleProvider="target">
             <connections>
+                <outlet property="closeButton" destination="ETv-0N-OHI" id="AMQ-2q-KIK"/>
                 <outlet property="imageButton" destination="ziI-1d-U5C" id="ipm-f6-WnD"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -17,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <button translatesAutoresizingMaskIntoConstraints="NO" id="ziI-1d-U5C" customClass="LoginImageButton" customModule="MacQQ" customModuleProvider="target">
+                <button translatesAutoresizingMaskIntoConstraints="NO" id="ziI-1d-U5C" customClass="LoginImageButton" customModule="collectionViewZoomOutAndInProfessional" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
                     <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="aeL-7T-yJn">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -27,6 +28,17 @@
                         <action selector="handleImageButtonEvent:" target="-2" id="0dc-WU-jP2"/>
                     </connections>
                 </button>
+                <button hidden="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ETv-0N-OHI">
+                    <rect key="frame" x="0.0" y="30" width="10" height="10"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="closebutton" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="O6F-8F-2HY">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="handleClose:" target="-2" id="YWV-09-IsK"/>
+                    </connections>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="ziI-1d-U5C" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="3Wx-aT-kJ6"/>
@@ -34,8 +46,11 @@
                 <constraint firstAttribute="bottom" secondItem="ziI-1d-U5C" secondAttribute="bottom" id="uI7-Yh-Eh3"/>
                 <constraint firstItem="ziI-1d-U5C" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="yVX-49-S90"/>
             </constraints>
-            <point key="canvasLocation" x="-27" y="77.5"/>
+            <point key="canvasLocation" x="-27" y="77"/>
         </customView>
-        <customObject id="cGW-2s-nFo" customClass="UserItem" customModule="MacQQ" customModuleProvider="target"/>
+        <customObject id="cGW-2s-nFo" customClass="UserItem" customModule="collectionViewZoomOutAndInProfessional" customModuleProvider="target"/>
     </objects>
+    <resources>
+        <image name="closebutton" width="15" height="14"/>
+    </resources>
 </document>

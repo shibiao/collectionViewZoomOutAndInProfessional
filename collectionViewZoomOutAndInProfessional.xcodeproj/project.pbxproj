@@ -20,6 +20,7 @@
 		69B12DFA1FE8A32500B32474 /* LoginPasswordSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B12DF91FE8A32500B32474 /* LoginPasswordSecureField.swift */; };
 		69B12DFC1FE8E0B500B32474 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B12DFB1FE8E0B500B32474 /* CustomView.swift */; };
 		69B3882D1FF09DCB00806AA5 /* LoginScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B3882C1FF09DCB00806AA5 /* LoginScrollView.swift */; };
+		69B3882F1FF0EEB200806AA5 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B3882E1FF0EEB200806AA5 /* MainWindowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		69B12DF91FE8A32500B32474 /* LoginPasswordSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPasswordSecureField.swift; sourceTree = "<group>"; };
 		69B12DFB1FE8E0B500B32474 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		69B3882C1FF09DCB00806AA5 /* LoginScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScrollView.swift; sourceTree = "<group>"; };
+		69B3882E1FF0EEB200806AA5 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				04492D651FEFD68800F7F304 /* UserItemModel.swift */,
 				69A4B8FF1FE3B82900371C58 /* UserItem.swift */,
 				69A4B9001FE3B82900371C58 /* UserItem.xib */,
+				69B3882E1FF0EEB200806AA5 /* MainWindowController.swift */,
 				69A4B8CF1FE3516200371C58 /* Assets.xcassets */,
 				69A4B8D11FE3516200371C58 /* Main.storyboard */,
 				69A4B8D41FE3516200371C58 /* Info.plist */,
@@ -170,6 +173,7 @@
 				69B3882D1FF09DCB00806AA5 /* LoginScrollView.swift in Sources */,
 				69A4B8E01FE35AC100371C58 /* LoginImageButton.swift in Sources */,
 				04492D661FEFD68800F7F304 /* UserItemModel.swift in Sources */,
+				69B3882F1FF0EEB200806AA5 /* MainWindowController.swift in Sources */,
 				69A4B8DC1FE351B300371C58 /* LoginWindowController.swift in Sources */,
 				69A4B8CC1FE3516200371C58 /* AppDelegate.swift in Sources */,
 			);

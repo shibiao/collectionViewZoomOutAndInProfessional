@@ -9,7 +9,7 @@
 import Cocoa
 
 class LoginWindowController: NSWindowController {
-
+    
     override func windowDidLoad() {
         super.windowDidLoad()
         //隐藏最小化按钮
@@ -23,7 +23,8 @@ class LoginWindowController: NSWindowController {
         //设置窗口整体可以移动
         window?.isMovableByWindowBackground = true
         
-        
+        window?.center()
+        window?.isRestorable = false
     }
 
 }

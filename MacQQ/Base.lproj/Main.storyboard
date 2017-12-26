@@ -674,7 +674,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="MacQQ" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="collectionViewZoomOutAndInProfessional" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -683,7 +683,7 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" customClass="LoginWindowController" customModule="MacQQ" customModuleProvider="target" sceneMemberID="viewController">
+                <windowController id="B8D-0N-5wS" customClass="LoginWindowController" customModule="collectionViewZoomOutAndInProfessional" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -704,7 +704,7 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="MacQQ" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="collectionViewZoomOutAndInProfessional" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="248" height="316"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -723,7 +723,7 @@
                                             <action selector="handleClose:" target="XfG-lQ-9wD" id="5eS-bY-k3M"/>
                                         </connections>
                                     </button>
-                                    <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K1B-Al-G98" customClass="LoginAccountTextField" customModule="MacQQ" customModuleProvider="target">
+                                    <textField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K1B-Al-G98" customClass="LoginAccountTextField" customModule="collectionViewZoomOutAndInProfessional" customModuleProvider="target">
                                         <rect key="frame" x="47" y="112" width="155" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" focusRingType="none" alignment="left" placeholderString="输入账号" drawsBackground="YES" id="TZW-Qa-Dv3">
@@ -751,7 +751,7 @@
                                             <action selector="handleSubWindow:" target="XfG-lQ-9wD" id="r0y-aC-nuE"/>
                                         </connections>
                                     </button>
-                                    <secureTextField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mnf-fT-xNK" customClass="LoginPasswordSecureField" customModule="MacQQ" customModuleProvider="target">
+                                    <secureTextField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mnf-fT-xNK" customClass="LoginPasswordSecureField" customModule="collectionViewZoomOutAndInProfessional" customModuleProvider="target">
                                         <rect key="frame" x="47" y="67" width="115" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" focusRingType="none" placeholderString="输入密码" drawsBackground="YES" usesSingleLineMode="YES" id="h2V-HB-Y2d">
@@ -771,15 +771,15 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <segue destination="5YI-BW-skw" kind="show" id="kPc-At-Ktf"/>
+                                            <segue destination="tuu-Iz-lJT" kind="show" identifier="show" id="Yh6-es-NLu"/>
                                         </connections>
                                     </button>
-                                    <scrollView wantsLayer="YES" fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="hGR-Lx-GrY" customClass="LoginScrollView" customModule="MacQQ" customModuleProvider="target">
+                                    <scrollView wantsLayer="YES" fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" verticalScrollElasticity="none" translatesAutoresizingMaskIntoConstraints="NO" id="hGR-Lx-GrY" customClass="LoginScrollView" customModule="collectionViewZoomOutAndInProfessional" customModuleProvider="target">
                                         <rect key="frame" x="44" y="164" width="158" height="102"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <clipView key="contentView" ambiguous="YES" drawsBackground="NO" id="fEU-FE-Zoy">
                                             <rect key="frame" x="0.0" y="0.0" width="158" height="102"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <collectionView ambiguous="YES" id="iAD-kA-lII">
                                                     <rect key="frame" x="0.0" y="0.0" width="158" height="102"/>
@@ -801,7 +801,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                         <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="j9p-Pe-jAF">
-                                            <rect key="frame" x="-16" y="0.0" width="16" height="0.0"/>
+                                            <rect key="frame" x="142" y="0.0" width="16" height="102"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </scroller>
                                     </scrollView>
@@ -825,7 +825,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-42" y="670"/>
+            <point key="canvasLocation" x="-35" y="681"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Qx7-rA-wT0">
@@ -879,6 +879,27 @@
             </objects>
             <point key="canvasLocation" x="-653" y="1035"/>
         </scene>
+        <!--Window Controller-->
+        <scene sceneID="iKY-R6-j5U">
+            <objects>
+                <windowController id="tuu-Iz-lJT" customClass="MainWindowController" customModule="collectionViewZoomOutAndInProfessional" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="g83-Cx-nfv">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="294" y="313" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+                        <connections>
+                            <outlet property="delegate" destination="tuu-Iz-lJT" id="3he-zF-pUl"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="5YI-BW-skw" kind="relationship" relationship="window.shadowedContentViewController" id="ZKV-ik-cUK"/>
+                    </connections>
+                </windowController>
+                <customObject id="Otd-PJ-J9c" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="588" y="460"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="a7v-UB-qLd">
             <objects>
@@ -894,92 +915,59 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
-                            </button>
-                            <containerView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M25-4I-6I3" customClass="CustomView" customModule="MacQQ" customModuleProvider="target">
-                                <rect key="frame" x="77" y="112" width="225" height="150"/>
-                                <autoresizingMask key="autoresizingMask"/>
                                 <connections>
-                                    <segue destination="Mm7-FA-QRC" kind="embed" id="fre-xv-B1w"/>
+                                    <segue destination="k3Y-4a-L29" kind="popover" popoverAnchorView="kwq-eE-nlx" popoverBehavior="t" preferredEdge="maxY" id="yab-TG-urG"/>
                                 </connections>
-                            </containerView>
+                            </button>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="hyi-I2-q8V">
+                                <rect key="frame" x="0.0" y="245" width="450" height="55"/>
+                            </customView>
+                            <splitView arrangesAllSubviews="NO" dividerStyle="paneSplitter" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ajy-QS-YYN">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="244"/>
+                                <subviews>
+                                    <customView fixedFrame="YES" id="Uo2-Zk-xmD">
+                                        <rect key="frame" x="0.0" y="0.0" width="147" height="244"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </customView>
+                                    <customView fixedFrame="YES" id="Oe1-ZP-w8g">
+                                        <rect key="frame" x="157" y="0.0" width="293" height="244"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </customView>
+                                </subviews>
+                                <holdingPriorities>
+                                    <real value="250"/>
+                                    <real value="250"/>
+                                </holdingPriorities>
+                            </splitView>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ajy-QS-YYN" secondAttribute="bottom" id="1D2-Di-sqp"/>
+                            <constraint firstItem="ajy-QS-YYN" firstAttribute="top" secondItem="dXO-Pk-5lQ" secondAttribute="top" constant="56" id="6B9-ru-B48"/>
+                            <constraint firstItem="ajy-QS-YYN" firstAttribute="trailing" secondItem="hyi-I2-q8V" secondAttribute="trailing" id="IbB-6w-sy4"/>
+                            <constraint firstItem="ajy-QS-YYN" firstAttribute="leading" secondItem="hyi-I2-q8V" secondAttribute="leading" id="IeP-hB-DJQ"/>
+                            <constraint firstItem="hyi-I2-q8V" firstAttribute="top" secondItem="dXO-Pk-5lQ" secondAttribute="top" id="Mep-x9-q2S"/>
+                            <constraint firstItem="ajy-QS-YYN" firstAttribute="leading" secondItem="dXO-Pk-5lQ" secondAttribute="leading" id="RAp-Z1-pzc"/>
+                            <constraint firstItem="ajy-QS-YYN" firstAttribute="top" secondItem="hyi-I2-q8V" secondAttribute="bottom" constant="1" id="Xio-YF-XfD"/>
+                            <constraint firstAttribute="trailing" secondItem="ajy-QS-YYN" secondAttribute="trailing" id="biw-Dn-WVd"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="xud-b0-nid" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="459" y="670"/>
+            <point key="canvasLocation" x="588" y="869"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="Vl9-ah-rnV">
+        <scene sceneID="aCF-o5-Cx7">
             <objects>
-                <viewController id="He2-ql-Nno" sceneMemberID="viewController">
-                    <view key="view" id="a1A-q9-1bn">
+                <viewController id="k3Y-4a-L29" sceneMemberID="viewController">
+                    <view key="view" id="VX0-TG-ycG">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QpY-BE-RY8">
-                                <rect key="frame" x="85" y="211" width="61" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="KhA-hO-LAh">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gdD-Kg-WC9">
-                                <rect key="frame" x="28" y="36" width="81" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Rfd-0U-Yxs">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
-                        </subviews>
                     </view>
                 </viewController>
-                <customObject id="d45-VW-OvH" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="d3k-UW-6MU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="325" y="1106"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="vDM-VU-oAh">
-            <objects>
-                <viewController id="Mm7-FA-QRC" sceneMemberID="viewController">
-                    <view key="view" id="NR5-ls-PdO">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qPY-f8-5pf">
-                                <rect key="frame" x="172" y="112" width="13" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Bbn-ud-QMf">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
-                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="twS-hl-66e">
-                                <rect key="frame" x="226" y="143" width="76" height="26"/>
-                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="5qO-IC-4q2" id="pOQ-AB-lZw">
-                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="menu"/>
-                                    <menu key="menu" id="DRZ-bj-TlR">
-                                        <items>
-                                            <menuItem title="Item 1" state="on" id="5qO-IC-4q2"/>
-                                            <menuItem title="Item 2" id="NVm-8Y-TGM"/>
-                                            <menuItem title="Item 3" id="RTm-EJ-iVR"/>
-                                        </items>
-                                    </menu>
-                                </popUpButtonCell>
-                            </popUpButton>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="twS-hl-66e" firstAttribute="top" secondItem="NR5-ls-PdO" secondAttribute="top" constant="133" id="grp-qY-FD5"/>
-                            <constraint firstAttribute="trailing" secondItem="twS-hl-66e" secondAttribute="trailing" constant="151" id="iIL-f0-OFC"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <customObject id="xw4-sN-B7l" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="797" y="1106"/>
+            <point key="canvasLocation" x="588" y="1323"/>
         </scene>
     </scenes>
     <resources>

@@ -29,9 +29,9 @@ class ViewController: NSViewController {
         "avatar2",
         "avatar",
         "avatar2",
+        "add"
         ]
         collectionView.register(NSNib.init(nibNamed: NSNib.Name.init("UserItem"), bundle: nil), forItemWithIdentifier: NSUserInterfaceItemIdentifier.init("UserItem"))
-        
         
     }
     @objc func handleButtonClick(_ sender: LoginImageButton) {
@@ -42,6 +42,12 @@ class ViewController: NSViewController {
         }) {
             self.collectionView.isHidden = false
             self.transitionItem.removeFromSuperview()
+        }
+    }
+
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        if segue.identifier?.rawValue == "show" {
+            self.view.window?.close()
         }
     }
     override func viewWillAppear() {
@@ -121,6 +127,7 @@ extension ViewController: NSCollectionViewDataSource,NSCollectionViewDelegate {
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         let item = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier.init("UserItem"), for: indexPath) as! UserItem
         item.model = UserItemModel(name: usersData[indexPath.item])
+        item.delegate = self
         item.block = { [weak self](sender) -> Void in
             if let weakSelf = self {
                 weakSelf.handleItem(item, with: indexPath)
@@ -145,3 +152,18 @@ extension ViewController: NSCollectionViewDataSource,NSCollectionViewDelegate {
         }, completionHandler: nil)
     }
 }
+extension ViewController: UserItemDelegate {
+    func userItem(_ item: UserItem, didClick button: NSButton) {
+        if let indexPath = collectionView.indexPath(for: item) {
+            collectionView.deleteItems(at: [indexPath])
+            usersData.remove(at: indexPath.item)
+            collectionView.reloadData()
+        }
+       
+        
+    }
+    
+    
+}
+    
+
