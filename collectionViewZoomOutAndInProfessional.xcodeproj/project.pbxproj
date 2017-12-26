@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		04492D661FEFD68800F7F304 /* UserItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04492D651FEFD68800F7F304 /* UserItemModel.swift */; };
+		69A04AA31FF1D85600F889CD /* ToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A04AA21FF1D85600F889CD /* ToolBarView.swift */; };
+		69A04AA71FF1E25500F889CD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A04AA61FF1E25500F889CD /* MainViewController.swift */; };
 		69A4B8CC1FE3516200371C58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A4B8CB1FE3516200371C58 /* AppDelegate.swift */; };
 		69A4B8CE1FE3516200371C58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A4B8CD1FE3516200371C58 /* ViewController.swift */; };
 		69A4B8D01FE3516200371C58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69A4B8CF1FE3516200371C58 /* Assets.xcassets */; };
@@ -21,10 +23,13 @@
 		69B12DFC1FE8E0B500B32474 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B12DFB1FE8E0B500B32474 /* CustomView.swift */; };
 		69B3882D1FF09DCB00806AA5 /* LoginScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B3882C1FF09DCB00806AA5 /* LoginScrollView.swift */; };
 		69B3882F1FF0EEB200806AA5 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B3882E1FF0EEB200806AA5 /* MainWindowController.swift */; };
+		69C164971FF1F53C00697F35 /* SBSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C164961FF1F53C00697F35 /* SBSplitView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		04492D651FEFD68800F7F304 /* UserItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserItemModel.swift; sourceTree = "<group>"; };
+		69A04AA21FF1D85600F889CD /* ToolBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBarView.swift; sourceTree = "<group>"; };
+		69A04AA61FF1E25500F889CD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		69A4B8C81FE3516200371C58 /* collectionViewZoomOutAndInProfessional.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = collectionViewZoomOutAndInProfessional.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69A4B8CB1FE3516200371C58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69A4B8CD1FE3516200371C58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +46,7 @@
 		69B12DFB1FE8E0B500B32474 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		69B3882C1FF09DCB00806AA5 /* LoginScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScrollView.swift; sourceTree = "<group>"; };
 		69B3882E1FF0EEB200806AA5 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		69C164961FF1F53C00697F35 /* SBSplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBSplitView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69A04AA01FF1D82F00F889CD /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				69A4B8CD1FE3516200371C58 /* ViewController.swift */,
+				69B3882C1FF09DCB00806AA5 /* LoginScrollView.swift */,
+				69B12DF71FE8A11C00B32474 /* LoginAccountTextField.swift */,
+				69B12DF91FE8A32500B32474 /* LoginPasswordSecureField.swift */,
+				69A4B8DB1FE351B300371C58 /* LoginWindowController.swift */,
+				69A4B8DF1FE35AC100371C58 /* LoginImageButton.swift */,
+				69B12DFB1FE8E0B500B32474 /* CustomView.swift */,
+				04492D651FEFD68800F7F304 /* UserItemModel.swift */,
+				69A4B8FF1FE3B82900371C58 /* UserItem.swift */,
+				69A4B9001FE3B82900371C58 /* UserItem.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		69A04AA11FF1D83D00F889CD /* MainUI */ = {
+			isa = PBXGroup;
+			children = (
+				69B3882E1FF0EEB200806AA5 /* MainWindowController.swift */,
+				69A04AA21FF1D85600F889CD /* ToolBarView.swift */,
+				69A04AA61FF1E25500F889CD /* MainViewController.swift */,
+				69C164961FF1F53C00697F35 /* SBSplitView.swift */,
+			);
+			path = MainUI;
+			sourceTree = "<group>";
+		};
 		69A4B8BF1FE3516200371C58 = {
 			isa = PBXGroup;
 			children = (
@@ -74,17 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				69A4B8CB1FE3516200371C58 /* AppDelegate.swift */,
-				69A4B8CD1FE3516200371C58 /* ViewController.swift */,
-				69B3882C1FF09DCB00806AA5 /* LoginScrollView.swift */,
-				69B12DF71FE8A11C00B32474 /* LoginAccountTextField.swift */,
-				69B12DF91FE8A32500B32474 /* LoginPasswordSecureField.swift */,
-				69A4B8DB1FE351B300371C58 /* LoginWindowController.swift */,
-				69A4B8DF1FE35AC100371C58 /* LoginImageButton.swift */,
-				69B12DFB1FE8E0B500B32474 /* CustomView.swift */,
-				04492D651FEFD68800F7F304 /* UserItemModel.swift */,
-				69A4B8FF1FE3B82900371C58 /* UserItem.swift */,
-				69A4B9001FE3B82900371C58 /* UserItem.xib */,
-				69B3882E1FF0EEB200806AA5 /* MainWindowController.swift */,
+				69A04AA01FF1D82F00F889CD /* Login */,
+				69A04AA11FF1D83D00F889CD /* MainUI */,
 				69A4B8CF1FE3516200371C58 /* Assets.xcassets */,
 				69A4B8D11FE3516200371C58 /* Main.storyboard */,
 				69A4B8D41FE3516200371C58 /* Info.plist */,
@@ -165,12 +190,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69C164971FF1F53C00697F35 /* SBSplitView.swift in Sources */,
 				69A4B9011FE3B82900371C58 /* UserItem.swift in Sources */,
+				69A04AA71FF1E25500F889CD /* MainViewController.swift in Sources */,
 				69B12DFC1FE8E0B500B32474 /* CustomView.swift in Sources */,
 				69B12DFA1FE8A32500B32474 /* LoginPasswordSecureField.swift in Sources */,
 				69B12DF81FE8A11C00B32474 /* LoginAccountTextField.swift in Sources */,
 				69A4B8CE1FE3516200371C58 /* ViewController.swift in Sources */,
 				69B3882D1FF09DCB00806AA5 /* LoginScrollView.swift in Sources */,
+				69A04AA31FF1D85600F889CD /* ToolBarView.swift in Sources */,
 				69A4B8E01FE35AC100371C58 /* LoginImageButton.swift in Sources */,
 				04492D661FEFD68800F7F304 /* UserItemModel.swift in Sources */,
 				69B3882F1FF0EEB200806AA5 /* MainWindowController.swift in Sources */,

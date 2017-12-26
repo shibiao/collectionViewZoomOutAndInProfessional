@@ -900,37 +900,40 @@
             </objects>
             <point key="canvasLocation" x="588" y="460"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="a7v-UB-qLd">
             <objects>
-                <viewController id="5YI-BW-skw" sceneMemberID="viewController">
+                <viewController id="5YI-BW-skw" customClass="MainViewController" customModule="collectionViewZoomOutAndInProfessional" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="dXO-Pk-5lQ">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="684" height="499"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kwq-eE-nlx">
-                                <rect key="frame" x="60" y="13" width="81" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Dh6-Rx-wFN">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <segue destination="k3Y-4a-L29" kind="popover" popoverAnchorView="kwq-eE-nlx" popoverBehavior="t" preferredEdge="maxY" id="yab-TG-urG"/>
-                                </connections>
-                            </button>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="hyi-I2-q8V">
-                                <rect key="frame" x="0.0" y="245" width="450" height="55"/>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="hyi-I2-q8V" customClass="ToolBarView" customModule="collectionViewZoomOutAndInProfessional" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="444" width="684" height="55"/>
                             </customView>
-                            <splitView arrangesAllSubviews="NO" dividerStyle="paneSplitter" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ajy-QS-YYN">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="244"/>
+                            <splitView arrangesAllSubviews="NO" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ajy-QS-YYN" customClass="SBSplitView" customModule="collectionViewZoomOutAndInProfessional" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="684" height="443"/>
                                 <subviews>
-                                    <customView fixedFrame="YES" id="Uo2-Zk-xmD">
-                                        <rect key="frame" x="0.0" y="0.0" width="147" height="244"/>
+                                    <customView id="Uo2-Zk-xmD">
+                                        <rect key="frame" x="0.0" y="0.0" width="199" height="443"/>
                                         <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <containerView translatesAutoresizingMaskIntoConstraints="NO" id="AID-dY-7pH">
+                                                <rect key="frame" x="0.0" y="0.0" width="199" height="443"/>
+                                                <connections>
+                                                    <segue destination="lOP-Tl-N4m" kind="embed" id="3vk-2a-5ej"/>
+                                                </connections>
+                                            </containerView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="AID-dY-7pH" firstAttribute="leading" secondItem="Uo2-Zk-xmD" secondAttribute="leading" id="6rd-gE-RcY"/>
+                                            <constraint firstAttribute="bottom" secondItem="AID-dY-7pH" secondAttribute="bottom" id="9Ks-wM-126"/>
+                                            <constraint firstAttribute="trailing" secondItem="AID-dY-7pH" secondAttribute="trailing" id="M80-DP-oWk"/>
+                                            <constraint firstItem="AID-dY-7pH" firstAttribute="top" secondItem="Uo2-Zk-xmD" secondAttribute="top" id="k4z-yE-V3p"/>
+                                        </constraints>
                                     </customView>
                                     <customView fixedFrame="YES" id="Oe1-ZP-w8g">
-                                        <rect key="frame" x="157" y="0.0" width="293" height="244"/>
+                                        <rect key="frame" x="200" y="0.0" width="484" height="443"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </customView>
                                 </subviews>
@@ -938,6 +941,9 @@
                                     <real value="250"/>
                                     <real value="250"/>
                                 </holdingPriorities>
+                                <connections>
+                                    <outlet property="delegate" destination="5YI-BW-skw" id="dOr-gR-5q4"/>
+                                </connections>
                             </splitView>
                         </subviews>
                         <constraints>
@@ -951,23 +957,61 @@
                             <constraint firstAttribute="trailing" secondItem="ajy-QS-YYN" secondAttribute="trailing" id="biw-Dn-WVd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="leftSideView" destination="Uo2-Zk-xmD" id="j5R-Re-9zy"/>
+                        <outlet property="mainSplitView" destination="ajy-QS-YYN" id="U05-nE-0uU"/>
+                    </connections>
                 </viewController>
                 <customObject id="xud-b0-nid" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="588" y="869"/>
+            <point key="canvasLocation" x="705" y="968.5"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="aCF-o5-Cx7">
+        <scene sceneID="WO4-rP-pNB">
             <objects>
-                <viewController id="k3Y-4a-L29" sceneMemberID="viewController">
-                    <view key="view" id="VX0-TG-ycG">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                <viewController id="lOP-Tl-N4m" sceneMemberID="viewController">
+                    <view key="view" id="Ikf-Jx-cNX">
+                        <rect key="frame" x="0.0" y="0.0" width="185" height="420"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9I-ht-phx">
+                                <rect key="frame" x="0.0" y="0.0" width="185" height="420"/>
+                                <clipView key="contentView" drawsBackground="NO" id="1nJ-ed-40F">
+                                    <rect key="frame" x="0.0" y="0.0" width="185" height="420"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView id="sqq-ne-YkL">
+                                            <rect key="frame" x="0.0" y="0.0" width="185" height="158"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="U1y-Ax-Piz">
+                                                <size key="itemSize" width="50" height="50"/>
+                                            </collectionViewFlowLayout>
+                                            <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </collectionView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="oaH-Jr-LkY">
+                                    <rect key="frame" x="1" y="298" width="173" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="0zQ-Gn-aJq">
+                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="y9I-ht-phx" firstAttribute="top" secondItem="Ikf-Jx-cNX" secondAttribute="top" id="5lS-dw-e42"/>
+                            <constraint firstAttribute="bottom" secondItem="y9I-ht-phx" secondAttribute="bottom" id="Quw-R4-sIt"/>
+                            <constraint firstItem="y9I-ht-phx" firstAttribute="leading" secondItem="Ikf-Jx-cNX" secondAttribute="leading" id="xbk-kR-LgJ"/>
+                            <constraint firstAttribute="trailing" secondItem="y9I-ht-phx" secondAttribute="trailing" id="ysc-sc-AWz"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <customObject id="d3k-UW-6MU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="B0d-LM-bfm" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="588" y="1323"/>
+            <point key="canvasLocation" x="463.5" y="1564"/>
         </scene>
     </scenes>
     <resources>
